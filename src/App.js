@@ -1,9 +1,10 @@
 import './App.css';
+import Home from './component/Home/Home';
 
 function App() {
   return (
-    <div className="App">
-     <h1>hi form fitfix</h1>
+    <div>
+     <Home></Home>
     </div>
   );
 }
