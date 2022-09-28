@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import AddBreak from '../AddBreak/AddBreak';
 import Header from '../Header/Header';
+import Info from '../Info/Info';
+import Infodetails from '../InfoDetails/Infodetails';
 import Workouts from '../Workouts/Workouts';
 
 
@@ -28,7 +31,11 @@ const Home = () => {
                </div>
              
             </div>
-            <div className="right-side text-center bg-[#EAEFF2] shadow-2xl h-screen"> 
+            <div className="right-side p-4 bg-[#DFF6FF] shadow-2xl h-screen"> 
+            <Info></Info>
+            <Infodetails></Infodetails>
+            <AddBreak></AddBreak>
+            
             
             </div>
             </div>
