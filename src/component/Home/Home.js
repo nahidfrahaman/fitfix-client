@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import AddBreak from '../AddBreak/AddBreak';
+import ExerciseDetails from '../Exercise/ExerciseDetails';
 import Header from '../Header/Header';
 import Info from '../Info/Info';
 import Infodetails from '../InfoDetails/Infodetails';
@@ -35,6 +36,8 @@ const Home = () => {
             <Info></Info>
             <Infodetails></Infodetails>
             <AddBreak></AddBreak>
+            <ExerciseDetails></ExerciseDetails>
+            <button className='btn w-[96%] mt-8 bg-blue-500'> Activity Completed</button>
             
             
             </div>
