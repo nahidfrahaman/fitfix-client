@@ -1,12 +1,11 @@
 import React from 'react';
 
-const ExerciseDetails = ({time}) => {
+const ExerciseDetails = ({time, addBreakTime}) => {
     
     
-    
+    // console.log(addBreakTime)
    
-   
-    return (
+   return (
         <div>
             <div className='mt-8'>
                 <h3 className='text-xl font-semibold'>Exercise Details</h3>
@@ -18,7 +17,7 @@ const ExerciseDetails = ({time}) => {
             </div>
             <div className='w-[100%]  bg-[#EAEFF2] p-4 flex justify-evenly mt-2'>
                 <p>Break Time</p>
-                <p><span>00</span> min</p>
+                <p><span>{addBreakTime}</span> min</p>
                 
             </div>
         </div>

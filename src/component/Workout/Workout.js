@@ -14,7 +14,7 @@ const Workout = ({name, img , time ,discription, handleEvent}) => {
        <div className="card-actions">
              <p>Time required: {time} min</p>
             
-        </div>
+       </div>
         <div onClick={()=>handleEvent(time)} className='mx-auto mt-4'>
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded ">Add to list</button>
             </div>

@@ -6,7 +6,7 @@ const Info = () => {
         <div>
         <div className="avatar mt-3 my-10  flex ">
           <div className="w-20 rounded-full ring  ">
-          <img src={MyImage} />
+          <img src={MyImage} alt='/' />
          </div>
          <strong className='ml-4 inline-block'>Mir  Nahid</strong>
          <span className='block'> Kushtia , Bangladesh</span>

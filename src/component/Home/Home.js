@@ -8,10 +8,14 @@ import Workouts from '../Workouts/Workouts';
 
 
 
-
 const Home = () => {
     const [activities, setActivities]= useState([])
     const [time , setTime]= useState(0)
+    const [addBreakTime, setAddBreakTime]=useState(0);
+    
+
+
+    
 
     useEffect(()=>{
         fetch('products.json')
@@ -21,10 +25,28 @@ const Home = () => {
 
     const handleEvent=(newtime)=>{
         setTime(time + newtime);
-         
-    }
+         }
     
-
+         
+   const handleAddBreak=(breaktime)=>{
+        const isExist= localStorage.getItem("breakTime")
+        console.log(isExist)
+         if (isExist){
+            setAddBreakTime(isExist)
+            localStorage.setItem("breakTime", breaktime)
+            setAddBreakTime(breaktime)
+            console.log(isExist)
+        }
+        else{
+            localStorage.setItem("breakTime", breaktime)
+            setAddBreakTime(breaktime)
+        }
+  }
+  useEffect(()=>{
+    const olddata= localStorage.getItem("breakTime")
+    setAddBreakTime(olddata)
+ },[])
+     
     return (
         <div>
             <div className='grid grid-cols-1 lg:grid-cols-4 '>
@@ -37,14 +59,17 @@ const Home = () => {
                     key={activity.id}
                     activity={activity}></Workouts> )
                }
+               
                </div>
-             
-            </div>
+             </div>
+             {/* lest site start */}
             <div className="right-side p-4 bg-[#DFF6FF] shadow-2xl h-screen"> 
             <Info></Info>
             <Infodetails></Infodetails>
-            <AddBreak></AddBreak>
-            <ExerciseDetails time={time}></ExerciseDetails>
+            <AddBreak handleAddBreak={handleAddBreak}></AddBreak>
+            <ExerciseDetails 
+            addBreakTime={addBreakTime}
+            time={time}></ExerciseDetails>
             <button className='btn w-[96%] mt-8 bg-blue-500'> Activity Completed</button>
             
             
