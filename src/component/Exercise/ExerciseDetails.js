@@ -1,6 +1,11 @@
 import React from 'react';
 
-const ExerciseDetails = () => {
+const ExerciseDetails = ({time}) => {
+    
+    
+    
+   
+   
     return (
         <div>
             <div className='mt-8'>
@@ -8,7 +13,7 @@ const ExerciseDetails = () => {
             </div>
             <div className='w-[100%]  bg-[#EAEFF2] p-4 flex justify-evenly mt-2'>
                 <p>Exercise Time</p>
-                <p><span>00</span> min</p>
+                <p><span>{time}</span> min</p>
                 
             </div>
             <div className='w-[100%]  bg-[#EAEFF2] p-4 flex justify-evenly mt-2'>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Workout from '../Workout/Workout';
-const Workouts = ({activity}) => {
+const Workouts = ({activity,handleEvent}) => {
     const {name, img, time, discription}=activity
     
     
@@ -8,6 +8,7 @@ const Workouts = ({activity}) => {
         <div>
             <div>
                 <Workout 
+                handleEvent={handleEvent}
                 discription={discription}
                 time={time}
                 img={img}

@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Workout = ({name, img , time ,discription}) => {
-    console.log(img)
+const Workout = ({name, img , time ,discription, handleEvent}) => {
+   
     return (
         <div>
             <div className="card w-[100%] lg:h-[450px]  bg-[#EAEFF2] shadow-2xl rounded ">
@@ -15,7 +15,7 @@ const Workout = ({name, img , time ,discription}) => {
              <p>Time required: {time} min</p>
             
         </div>
-        <div className='mx-auto mt-4'>
+        <div onClick={()=>handleEvent(time)} className='mx-auto mt-4'>
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded ">Add to list</button>
             </div>
   </div>

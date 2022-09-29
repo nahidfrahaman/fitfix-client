@@ -11,12 +11,19 @@ import Workouts from '../Workouts/Workouts';
 
 const Home = () => {
     const [activities, setActivities]= useState([])
+    const [time , setTime]= useState(0)
 
     useEffect(()=>{
         fetch('products.json')
         .then(res=> res.json())
         .then(data=> setActivities(data))
     },[])
+
+    const handleEvent=(newtime)=>{
+        setTime(time + newtime);
+         
+    }
+    
 
     return (
         <div>
@@ -26,6 +33,7 @@ const Home = () => {
                <div className='grid gird-cols-1 lg:grid-cols-3 gap-x-8 gap-y-8'>
                {
                 activities.map(activity=> <Workouts 
+                    handleEvent={handleEvent}
                     key={activity.id}
                     activity={activity}></Workouts> )
                }
@@ -36,7 +44,7 @@ const Home = () => {
             <Info></Info>
             <Infodetails></Infodetails>
             <AddBreak></AddBreak>
-            <ExerciseDetails></ExerciseDetails>
+            <ExerciseDetails time={time}></ExerciseDetails>
             <button className='btn w-[96%] mt-8 bg-blue-500'> Activity Completed</button>
             
             
