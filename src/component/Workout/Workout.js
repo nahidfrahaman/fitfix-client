@@ -5,7 +5,7 @@ const Workout = ({name, img , time ,discription, handleEvent}) => {
     return (
         <div>
             <div className="card w-[100%] lg:h-[450px]  bg-[#EAEFF2] shadow-2xl rounded " data-aos="zoom-in" data-aos-duration="4000">
-             <figure className="px-10 pt-10">
+             <figure className="px-8 pt-8">
                <img src={img} alt="Shoes" className="rounded-xl" />
             </figure>
         <div className="card-body items-center text-center">

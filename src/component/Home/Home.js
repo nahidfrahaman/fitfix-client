@@ -59,10 +59,10 @@ const Home = () => {
      
     return (
         <div>
-            <div className='grid grid-cols-1 lg:grid-cols-4 '>
+            <div className='grid grid-cols-1 lg:grid-cols-4'>
             <div className="left-side col-span-3 text-cente">
                <Header></Header>
-               <div className='grid gird-cols-1 lg:grid-cols-3 gap-x-8 gap-y-8'>
+               <div className='grid gird-cols-1 lg:grid-cols-3 gap-x-8 gap-y-8 m-8'>
                {
                 activities.map(activity=> <Workouts 
                     handleEvent={handleEvent}
