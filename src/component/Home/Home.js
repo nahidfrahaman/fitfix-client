@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import Swal from 'sweetalert2';
 import AddBreak from '../AddBreak/AddBreak';
 import ExerciseDetails from '../Exercise/ExerciseDetails';
 import Header from '../Header/Header';
 import Info from '../Info/Info';
 import Infodetails from '../InfoDetails/Infodetails';
 import Workouts from '../Workouts/Workouts';
-
 
 
 const Home = () => {
@@ -46,6 +46,16 @@ const Home = () => {
     const olddata= localStorage.getItem("breakTime")
     setAddBreakTime(olddata)
  },[])
+  
+ const firetost=()=>{
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1500
+      })
+ }
      
     return (
         <div>
@@ -63,14 +73,15 @@ const Home = () => {
                </div>
              </div>
              {/* lest site start */}
-            <div className="right-side p-4 bg-[#DFF6FF] shadow-2xl h-screen"> 
+            <div className="right-side p-4 bg-[#DFF6FF] shadow-2xl h-screen" data-aos="zoom-in" data-aos-duration="4000"> 
             <Info></Info>
             <Infodetails></Infodetails>
             <AddBreak handleAddBreak={handleAddBreak}></AddBreak>
             <ExerciseDetails 
             addBreakTime={addBreakTime}
             time={time}></ExerciseDetails>
-            <button className='btn w-[96%] mt-8 bg-blue-500'> Activity Completed</button>
+            <button onClick={firetost} className='btn w-[96%] mt-8 bg-blue-500'> Activity Completed</button>
+            
             
             
             </div>

@@ -3,7 +3,7 @@ import './Qusiton.css';
 const Qusiton = () => {
     return (
         <div>
-            <div className=' bg-[#DFF6FF]'>
+            <div className=' bg-[#DFF6FF]' data-aos="zoom-in" data-aos-duration="4000">
             <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box w-[80%] mx-auto mt-5">
                <div className="collapse-title text-xl font-medium">
                   Qus:  How Does React work?
