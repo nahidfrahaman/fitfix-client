@@ -73,7 +73,7 @@ const Home = () => {
                </div>
              </div>
              {/* lest site start */}
-            <div className="right-side p-4 bg-[#DFF6FF] shadow-2xl h-screen" data-aos="zoom-in" data-aos-duration="4000"> 
+            <div className="right-side p-4 bg-[#DFF6FF] shadow-2xl h-[720px]" data-aos="zoom-in" data-aos-duration="4000"> 
             <Info></Info>
             <Infodetails></Infodetails>
             <AddBreak handleAddBreak={handleAddBreak}></AddBreak>
